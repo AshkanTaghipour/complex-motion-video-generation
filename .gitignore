@@ -1,0 +1,47 @@
+# PDFs and personal documents
+*.pdf
+
+# Blender files
+*.blend
+*.blend1
+
+# FBX assets (download from Mixamo)
+*.fbx
+
+# HDR environment maps (download from Poly Haven)
+*.hdr
+*.exr
+
+# Rendered outputs
+*.mp4
+*.png
+*.jpg
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Claude config
+.claude/
+
+# Original/draft scripts (cleaned version is in synthetic_data_generation/)
+back_flip.py
+
+# Sample annotation files in root (not part of the repo)
+/camera.json
+/joints.json
+/pose.json
+
+# Sim2Real tutorial (personal)
+sim2real_tutorial.pdf
