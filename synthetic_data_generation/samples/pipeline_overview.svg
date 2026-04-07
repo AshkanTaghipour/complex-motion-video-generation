@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="blenderGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5793A"/>
+      <stop offset="100%" stop-color="#E8601C"/>
+    </linearGradient>
+    <linearGradient id="inputGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#357ABD"/>
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2ECC71"/>
+      <stop offset="100%" stop-color="#27AE60"/>
+    </linearGradient>
+    <linearGradient id="vitposeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9B59B6"/>
+      <stop offset="100%" stop-color="#8E44AD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="520" rx="16" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="550" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#2C3E50">Synthetic Data Generation Pipeline</text>
+  <line x1="380" y1="50" x2="720" y2="50" stroke="#E0E0E0" stroke-width="1.5"/>
+
+  <!-- ==================== INPUT COLUMN ==================== -->
+
+  <!-- Mixamo Box -->
+  <rect x="40" y="100" width="200" height="130" rx="12" fill="url(#inputGrad)" filter="url(#shadow)"/>
+  <text x="140" y="133" text-anchor="middle" font-size="22" fill="white">🎭</text>
+  <text x="140" y="158" text-anchor="middle" font-size="14" font-weight="700" fill="white">Mixamo</text>
+  <text x="140" y="178" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">Rigged Characters</text>
+  <text x="140" y="194" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">+ Motion Clips (.fbx)</text>
+  <text x="140" y="218" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.6)">mixamo.com</text>
+
+  <!-- Poly Haven Box -->
+  <rect x="40" y="270" width="200" height="130" rx="12" fill="url(#inputGrad)" filter="url(#shadow)"/>
+  <text x="140" y="303" text-anchor="middle" font-size="22" fill="white">🌄</text>
+  <text x="140" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="white">Poly Haven</text>
+  <text x="140" y="348" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">HDR Environment Maps</text>
+  <text x="140" y="364" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">Outdoor Scenes (.hdr)</text>
+  <text x="140" y="388" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.6)">polyhaven.com</text>
+
+  <!-- Input label -->
+  <text x="140" y="438" text-anchor="middle" font-size="11" font-weight="600" fill="#7F8C8D">ASSETS</text>
+
+  <!-- ==================== ARROWS: Input → Blender ==================== -->
+
+  <!-- Arrow from Mixamo -->
+  <line x1="240" y1="165" x2="370" y2="220" stroke="#95A5A6" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="370,220 358,213 360,223" fill="#95A5A6"/>
+
+  <!-- Arrow from Poly Haven -->
+  <line x1="240" y1="335" x2="370" y2="280" stroke="#95A5A6" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="370,280 358,277 360,287" fill="#95A5A6"/>
+
+  <!-- Combinatorial label on arrows -->
+  <rect x="275" y="230" width="80" height="24" rx="12" fill="#ECF0F1"/>
+  <text x="315" y="246" text-anchor="middle" font-size="10" font-weight="600" fill="#7F8C8D">N × M</text>
+
+  <!-- ==================== BLENDER CENTER ==================== -->
+
+  <rect x="380" y="150" width="240" height="200" rx="16" fill="url(#blenderGrad)" filter="url(#shadow)"/>
+
+  <!-- Blender icon area -->
+  <text x="500" y="195" text-anchor="middle" font-size="30" fill="white">⚙️</text>
+  <text x="500" y="228" text-anchor="middle" font-size="18" font-weight="700" fill="white">Blender</text>
+  <text x="500" y="248" text-anchor="middle" font-size="12" fill="rgba(255,255,255,0.85)">Cycles Path Tracer</text>
+
+  <!-- Blender sub-steps -->
+  <line x1="410" y1="264" x2="590" y2="264" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="500" y="286" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)">Scene Assembly</text>
+  <text x="500" y="304" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)">GPU Rendering</text>
+  <text x="500" y="322" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.8)">3D → 2D Bone Projection</text>
+
+  <!-- Blender label -->
+  <text x="500" y="388" text-anchor="middle" font-size="11" font-weight="600" fill="#7F8C8D">RENDERING</text>
+
+  <!-- ==================== ARROWS: Blender → Outputs ==================== -->
+
+  <line x1="620" y1="250" x2="700" y2="250" stroke="#95A5A6" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="700,250 690,244 690,256" fill="#95A5A6"/>
+
+  <!-- ==================== OUTPUT COLUMN ==================== -->
+
+  <!-- Video output -->
+  <rect x="710" y="95" width="180" height="56" rx="10" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="730" y="128" font-size="16" fill="white">🎬</text>
+  <text x="755" y="121" font-size="13" font-weight="700" fill="white">video.mp4</text>
+  <text x="755" y="138" font-size="10" fill="rgba(255,255,255,0.8)">Rendered motion video</text>
+
+  <!-- Joints output -->
+  <rect x="710" y="165" width="180" height="56" rx="10" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="730" y="198" font-size="16" fill="white">🦴</text>
+  <text x="755" y="191" font-size="13" font-weight="700" fill="white">joints.json</text>
+  <text x="755" y="208" font-size="10" fill="rgba(255,255,255,0.8)">COCO-17 keypoints [0,1]</text>
+
+  <!-- Pose output -->
+  <rect x="710" y="235" width="180" height="56" rx="10" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="730" y="268" font-size="16" fill="white">🧍</text>
+  <text x="755" y="261" font-size="13" font-weight="700" fill="white">pose.json</text>
+  <text x="755" y="278" font-size="10" fill="rgba(255,255,255,0.8)">All bones (pixel coords)</text>
+
+  <!-- Camera output -->
+  <rect x="710" y="305" width="180" height="56" rx="10" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="730" y="338" font-size="16" fill="white">📷</text>
+  <text x="755" y="331" font-size="13" font-weight="700" fill="white">camera.json</text>
+  <text x="755" y="348" font-size="10" fill="rgba(255,255,255,0.8)">Intrinsics &amp; extrinsics</text>
+
+  <!-- Output label -->
+  <text x="800" y="395" text-anchor="middle" font-size="11" font-weight="600" fill="#7F8C8D">OUTPUTS (per scene)</text>
+
+  <!-- ==================== VITPOSE (downstream) ==================== -->
+
+  <!-- Dashed arrow from video to ViTPose -->
+  <line x1="800" y1="151" x2="800" y2="95" stroke="#95A5A6" stroke-width="1.5" stroke-dasharray="5,4" stroke-linecap="round"/>
+  <line x1="800" y1="72" x2="930" y2="72" stroke="#95A5A6" stroke-width="1.5" stroke-dasharray="5,4" stroke-linecap="round"/>
+  <line x1="930" y1="72" x2="930" y2="430" stroke="#95A5A6" stroke-width="1.5" stroke-dasharray="5,4" stroke-linecap="round"/>
+  <polygon points="930,430 924,420 936,420" fill="#95A5A6"/>
+
+  <!-- ViTPose box -->
+  <rect x="860" y="435" width="200" height="70" rx="12" fill="url(#vitposeGrad)" filter="url(#shadow)"/>
+  <text x="960" y="466" text-anchor="middle" font-size="14" font-weight="700" fill="white">🔬 ViTPose</text>
+  <text x="960" y="486" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">Detection-based 2D keypoints</text>
+  <text x="960" y="499" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.6)">(used for final training data)</text>
+
+  <!-- Dashed box label -->
+  <rect x="880" y="410" width="160" height="20" rx="4" fill="#FAFBFC"/>
+  <text x="960" y="424" text-anchor="middle" font-size="10" font-style="italic" fill="#9B59B6">post-processing step</text>
+
+  <!-- ==================== LEGEND ==================== -->
+  <rect x="40" y="468" width="280" height="40" rx="8" fill="#F0F3F5"/>
+  <circle cx="60" cy="488" r="6" fill="url(#inputGrad)"/>
+  <text x="72" y="492" font-size="10" fill="#5D6D7E">Assets</text>
+  <circle cx="120" cy="488" r="6" fill="url(#blenderGrad)"/>
+  <text x="132" y="492" font-size="10" fill="#5D6D7E">Renderer</text>
+  <circle cx="195" cy="488" r="6" fill="url(#outputGrad)"/>
+  <text x="207" y="492" font-size="10" fill="#5D6D7E">Outputs</text>
+  <circle cx="260" cy="488" r="6" fill="url(#vitposeGrad)"/>
+  <text x="272" y="492" font-size="10" fill="#5D6D7E">Post</text>
+</svg>

@@ -14,8 +14,11 @@
 
 # Rendered outputs
 *.mp4
+
+# Images (except committed diagrams)
 *.png
 *.jpg
+!synthetic_data_generation/samples/*.png
 
 # Python
 __pycache__/

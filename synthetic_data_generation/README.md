@@ -2,9 +2,9 @@
 
 > Blender-based pipeline for rendering synthetic human motion videos with automatic 2D pose annotations — used to construct the training dataset for our paper.
 
-<!-- TODO: add a banner image showing sample rendered frames -->
-![Pipeline Overview](samples/pipeline_overview.png)
-*⬆️ placeholder — replace with actual pipeline diagram*
+<p align="center">
+  <img src="samples/pipeline_overview.svg" alt="Pipeline Overview" width="900"/>
+</p>
 
 ---
 
@@ -232,13 +232,11 @@ output/
 
 ## 📊 Sample Outputs
 
-<!-- TODO: replace with actual sample frames from rendered videos -->
-
-| Sample Frame | Skeleton Overlay |
+| Rendered Frame (Blender Cycles) | ViTPose Detected Skeleton |
 |:---:|:---:|
 | ![sample_frame](samples/sample_frame.png) | ![sample_skeleton](samples/sample_skeleton.png) |
 
-*⬆️ placeholders — will be replaced with actual rendered samples*
+*Frame 8 of a sample render: an MMA kick character with an outdoor HDR environment (Poly Haven), and the corresponding 2D skeleton extracted by ViTPose.*
 
 ---
 
